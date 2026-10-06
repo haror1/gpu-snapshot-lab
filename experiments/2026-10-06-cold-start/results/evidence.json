@@ -1,0 +1,22 @@
+{
+  "c722d6d5-5f9d-467e-9f9e-36a8c00f6418": {
+    "kind": "creation",
+    "source": "modal-logs-2026-10-06.txt:185-189; ta-01M49QSWJF9Y3GN2YMEA8QM0QR creates then restores before serving"
+  },
+  "fbab0fdb-0f51-4021-b42e-e9d8f77934ed": {
+    "kind": "creation",
+    "source": "modal-logs-2026-10-06.txt:190-194; ta-01M49QV7AAK1ECAAP4XCK2PC8R creates then restores before serving"
+  },
+  "e0a455b9-8b6d-4caa-8dc9-f26b6bc55f40": {
+    "kind": "restore",
+    "source": "modal-logs-2026-10-06.txt:195-196; ta-01M49QWC85RB1N6XNW489BPW0R restores existing GPU snapshot then logs boot UUID"
+  },
+  "58bdf19e-3c34-4ecf-9d2d-5069075097f5": {
+    "kind": "restore",
+    "source": "modal-logs-2026-10-06.txt:197-198; ta-01M49QX0VVV9E7X9SV0N89XHRR restores existing CPU snapshot then logs boot UUID"
+  },
+  "125d06d3-a693-46b7-bc69-78c4504b16e0": {
+    "kind": "creation",
+    "source": "modal-logs-2026-10-06.txt:199-203; ta-01M49QY2ZB9HJT1KR2MJC9QW6R creates then restores a new GPU snapshot"
+  }
+}

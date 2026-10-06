@@ -1,0 +1,2 @@
+# Freeze the resolved client environment alongside every published run.
+modal==1.5.5

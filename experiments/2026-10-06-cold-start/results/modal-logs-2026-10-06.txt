@@ -1,0 +1,203 @@
+2026-10-06 16:01:44-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Building image im-JAr8dtpuKyQU51Laacdwog
+2026-10-06 16:01:44-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB 
+2026-10-06 16:01:44-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB => Step 0: FROM base
+2026-10-06 16:01:44-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB 
+2026-10-06 16:01:44-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB => Step 1: RUN python -m pip install huggingface-hub==0.30.2 torch==2.6.0 transformers==4.51.3
+2026-10-06 16:01:44-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Looking in indexes: http://pypi-mirror.modal.local:5555/simple
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting huggingface-hub==0.30.2
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/huggingface-hub/huggingface_hub-0.30.2-py3-none-any.whl.metadata (13 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting torch==2.6.0
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/torch/torch-2.6.0-cp312-cp312-manylinux1_x86_64.whl.metadata (28 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting transformers==4.51.3
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/transformers/transformers-4.51.3-py3-none-any.whl.metadata (38 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting filelock (from huggingface-hub==0.30.2)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/filelock/filelock-4.0.12-py3-none-any.whl.metadata (2.0 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting fsspec>=2023.5.0 (from huggingface-hub==0.30.2)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting packaging>=20.9 (from huggingface-hub==0.30.2)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/packaging/packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting pyyaml>=5.1 (from huggingface-hub==0.30.2)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/pyyaml/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting requests (from huggingface-hub==0.30.2)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting tqdm>=4.42.1 (from huggingface-hub==0.30.2)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/tqdm/tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting typing-extensions>=3.7.4.3 (from huggingface-hub==0.30.2)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/typing-extensions/typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting networkx (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/networkx/networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting jinja2 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/jinja2/jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cuda-nvrtc-cu12==12.4.127 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-nvrtc-cu12/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cuda-runtime-cu12==12.4.127 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-runtime-cu12/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cuda-cupti-cu12==12.4.127 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-cupti-cu12/nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cudnn-cu12==9.1.0.70 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cudnn-cu12/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cublas-cu12==12.4.5.8 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cublas-cu12/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cufft-cu12==11.2.1.3 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cufft-cu12/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-curand-cu12==10.3.5.147 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-curand-cu12/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cusolver-cu12==11.6.1.9 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusolver-cu12/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cusparse-cu12==12.3.1.170 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparse-cu12/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-cusparselt-cu12==0.6.2 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparselt-cu12/nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl.metadata (6.8 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-nccl-cu12==2.21.5 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nccl-cu12/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-nvtx-cu12==12.4.127 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting nvidia-nvjitlink-cu12==12.4.127 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvjitlink-cu12/nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting triton==3.2.0 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting setuptools (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/setuptools/setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting sympy==1.13.1 (from torch==2.6.0)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/sympy/sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting numpy>=1.17 (from transformers==4.51.3)
+2026-10-06 16:01:45-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/numpy/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting regex!=2019.12.17 (from transformers==4.51.3)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/regex/regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting tokenizers<0.22,>=0.21 (from transformers==4.51.3)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/tokenizers/tokenizers-0.21.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting safetensors>=0.4.3 (from transformers==4.51.3)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/safetensors/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting mpmath<1.4,>=1.1.0 (from sympy==1.13.1->torch==2.6.0)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/mpmath/mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting MarkupSafe>=2.0 (from jinja2->torch==2.6.0)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/markupsafe/markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting charset_normalizer<4,>=2 (from requests->huggingface-hub==0.30.2)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting idna<4,>=2.5 (from requests->huggingface-hub==0.30.2)
+2026-10-06 16:01:46-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/idna/idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-06 16:01:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting urllib3<3,>=1.26 (from requests->huggingface-hub==0.30.2)
+2026-10-06 16:01:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-06 16:01:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Collecting certifi>=2023.5.7 (from requests->huggingface-hub==0.30.2)
+2026-10-06 16:01:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB   Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-06 16:01:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/huggingface-hub/huggingface_hub-0.30.2-py3-none-any.whl (481 kB)
+2026-10-06 16:01:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/torch/torch-2.6.0-cp312-cp312-manylinux1_x86_64.whl (766.6 MB)
+2026-10-06 16:01:49-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 766.6/766.6 MB 341.2 MB/s eta 0:00:00
+2026-10-06 16:01:49-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/transformers/transformers-4.51.3-py3-none-any.whl (10.4 MB)
+2026-10-06 16:01:49-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 542.3 MB/s eta 0:00:00
+2026-10-06 16:01:49-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cublas-cu12/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 371.6 MB/s eta 0:00:00
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-cupti-cu12/nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 397.7 MB/s eta 0:00:00
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-nvrtc-cu12/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 375.2 MB/s eta 0:00:00
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cuda-runtime-cu12/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 449.5 MB/s eta 0:00:00
+2026-10-06 16:01:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cudnn-cu12/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+2026-10-06 16:01:51-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 520.9 MB/s eta 0:00:00
+2026-10-06 16:01:51-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cufft-cu12/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+2026-10-06 16:01:52-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 360.4 MB/s eta 0:00:00
+2026-10-06 16:01:52-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-curand-cu12/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+2026-10-06 16:01:52-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 361.8 MB/s eta 0:00:00
+2026-10-06 16:01:52-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusolver-cu12/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+2026-10-06 16:01:52-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 409.5 MB/s eta 0:00:00
+2026-10-06 16:01:53-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparse-cu12/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+2026-10-06 16:01:53-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 310.5 MB/s eta 0:00:00
+2026-10-06 16:01:53-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-cusparselt-cu12/nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl (150.1 MB)
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.1/150.1 MB 357.5 MB/s eta 0:00:00
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nccl-cu12/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 369.2 MB/s eta 0:00:00
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvjitlink-cu12/nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 306.9 MB/s eta 0:00:00
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/sympy/sympy-1.13.1-py3-none-any.whl (6.2 MB)
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 461.6 MB/s eta 0:00:00
+2026-10-06 16:01:54-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/triton/triton-3.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (253.2 MB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 253.2/253.2 MB 328.1 MB/s eta 0:00:00
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/mpmath/mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 984.7 MB/s eta 0:00:00
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/tokenizers/tokenizers-0.21.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 788.7 MB/s eta 0:00:00
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/fsspec/fsspec-2026.9.0-py3-none-any.whl (221 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/numpy/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 574.3 MB/s eta 0:00:00
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/packaging/packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/pyyaml/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 801.8 MB/s eta 0:00:00
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/regex/regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.8/807.8 kB 872.6 MB/s eta 0:00:00
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/safetensors/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/tqdm/tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/typing-extensions/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/filelock/filelock-4.0.12-py3-none-any.whl (111 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/jinja2/jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/markupsafe/markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/networkx/networkx-3.7-py3-none-any.whl (2.1 MB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 658.9 MB/s eta 0:00:00
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/requests/requests-2.34.2-py3-none-any.whl (73 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/charset-normalizer/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/idna/idna-3.20-py3-none-any.whl (69 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/urllib3/urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/certifi/certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Downloading http://pypi-mirror.modal.local:5555/simple/setuptools/setuptools-84.0.0-py3-none-any.whl (818 kB)
+2026-10-06 16:01:55-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 961.3 MB/s eta 0:00:00
+2026-10-06 16:01:57-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Installing collected packages: triton, nvidia-cusparselt-cu12, mpmath, urllib3, typing-extensions, tqdm, sympy, setuptools, safetensors, regex, pyyaml, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, idna, fsspec, filelock, charset_normalizer, certifi, requests, nvidia-cusparse-cu12, nvidia-cudnn-cu12, jinja2, nvidia-cusolver-cu12, huggingface-hub, torch, tokenizers, transformers
+2026-10-06 16:02:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB 
+2026-10-06 16:02:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Successfully installed MarkupSafe-3.0.4 certifi-2026.7.22 charset_normalizer-3.5.2 filelock-4.0.12 fsspec-2026.9.0 huggingface-hub-0.30.2 idna-3.20 jinja2-3.1.6 mpmath-1.3.0 networkx-3.7 numpy-2.5.3 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-cusparselt-cu12-0.6.2 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 packaging-26.3 pyyaml-6.0.3 regex-2026.9.29 requests-2.34.2 safetensors-0.8.0 setuptools-84.0.0 sympy-1.13.1 tokenizers-0.21.4 torch-2.6.0 tqdm-4.70.1 transformers-4.51.3 triton-3.2.0 typing-extensions-4.16.0 urllib3-2.8.0
+2026-10-06 16:02:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB 
+2026-10-06 16:02:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB [notice] A new release of pip is available: 25.1.1 -> 26.2.1
+2026-10-06 16:02:47-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB [notice] To update, run: pip install --upgrade pip
+2026-10-06 16:02:48-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Saving image...
+2026-10-06 16:02:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Image saved, took 2.02s
+2026-10-06 16:02:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB 
+2026-10-06 16:02:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB Built image im-JAr8dtpuKyQU51Laacdwog in 66.88s
+2026-10-06 16:02:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB 
+2026-10-06 16:02:50-07:00 ta-01M49Q74PSZRE3HB47QS9HRNSB 
+2026-10-06 16:02:52-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B Building image im-FJftzTpqlsPmb50gGDr0gr
+2026-10-06 16:02:52-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B 
+2026-10-06 16:02:52-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B => Step 0: FROM base
+2026-10-06 16:02:52-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B 
+2026-10-06 16:02:52-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B => Step 1: ENV HF_HUB_OFFLINE=1
+2026-10-06 16:02:52-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B 
+2026-10-06 16:02:52-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B => Step 2: ENV TOKENIZERS_PARALLELISM=false
+2026-10-06 16:02:53-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B Saving image...
+2026-10-06 16:02:54-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B Image saved, took 585.23ms
+2026-10-06 16:02:54-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B 
+2026-10-06 16:02:54-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B Built image im-FJftzTpqlsPmb50gGDr0gr in 1.45s
+2026-10-06 16:02:54-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B 
+2026-10-06 16:02:54-07:00 ta-01M49Q97HKN5NPR4XQ9CRRYP2B 
+2026-10-06 16:02:55-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR Building image im-Kv5J2rbCdvIBNVnGYbFbgj
+2026-10-06 16:02:55-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR 
+2026-10-06 16:02:55-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR => Step 0: running function 'download_model'
+2026-10-06 16:03:00-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR 
+2026-10-06 16:03:00-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR [1A2026-10-06 16:03:00-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-10-06 16:03:01-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR 
+2026-10-06 16:03:01-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR [1AFetching 10 files:  80%|████████  | 8/10 [00:00<00:00, 11.30it/s]
+2026-10-06 16:03:09-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR 
+2026-10-06 16:03:09-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR [1A2026-10-06 16:03:09-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR Fetching 10 files: 100%|██████████| 10/10 [00:08<00:00,  1.16it/s]
+2026-10-06 16:03:09-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR Saving image...
+2026-10-06 16:03:13-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR Image saved, took 3.74s
+2026-10-06 16:03:13-07:00 ta-01M49Q9A0PM22RN4CC9RTFYBQR Finished image build for im-Kv5J2rbCdvIBNVnGYbFbgj
+2026-10-06 16:10:16-07:00 ta-01M49QPGWPPXN85PJ4KMR1N2YR Sliding Window Attention is enabled but not implemented for `eager`; unexpected results may be encountered.
+2026-10-06 16:10:18-07:00 ta-01M49QPGWPPXN85PJ4KMR1N2YR {"event": "worker_ready_hook", "boot_id": "4dc4e788-6b9f-4b93-aa8c-764e74865c9b", "capture_id": "ad50c306-cd83-4786-b9e6-4bf5bee593c0", "mode": "none"}
+2026-10-06 16:11:45-07:00 ta-01M49QS8ZZ5JEKXQV2DKTJBFHR Sliding Window Attention is enabled but not implemented for `eager`; unexpected results may be encountered.
+2026-10-06 16:11:47-07:00 ta-01M49QS8ZZ5JEKXQV2DKTJBFHR {"event": "worker_ready_hook", "boot_id": "30a855a8-2d89-4f31-aa66-e0554f03067d", "capture_id": "cb31d601-00b9-43bc-8540-56f69ef2f5de", "mode": "none"}
+2026-10-06 16:11:58-07:00 ta-01M49QSWJF9Y3GN2YMEA8QM0QR Creating GPU memory snapshot for Function.
+2026-10-06 16:12:06-07:00 ta-01M49QSWJF9Y3GN2YMEA8QM0QR Sliding Window Attention is enabled but not implemented for `eager`; unexpected results may be encountered.
+2026-10-06 16:12:24-07:00 ta-01M49QSWJF9Y3GN2YMEA8QM0QR Snapshot created. Restoring Function from memory snapshot.
+2026-10-06 16:12:24-07:00 ta-01M49QSWJF9Y3GN2YMEA8QM0QR Restoring Function from memory snapshot.
+2026-10-06 16:12:25-07:00 ta-01M49QSWJF9Y3GN2YMEA8QM0QR {"event": "worker_ready_hook", "boot_id": "c722d6d5-5f9d-467e-9f9e-36a8c00f6418", "capture_id": "8544832e-f8ca-4763-aa1c-7ffa0248c08d", "mode": "gpu"}
+2026-10-06 16:12:42-07:00 ta-01M49QV7AAK1ECAAP4XCK2PC8R Creating CPU memory snapshot for Function.
+2026-10-06 16:12:53-07:00 ta-01M49QV7AAK1ECAAP4XCK2PC8R Sliding Window Attention is enabled but not implemented for `eager`; unexpected results may be encountered.
+2026-10-06 16:13:00-07:00 ta-01M49QV7AAK1ECAAP4XCK2PC8R Snapshot created. Restoring Function from memory snapshot.
+2026-10-06 16:13:00-07:00 ta-01M49QV7AAK1ECAAP4XCK2PC8R Restoring Function from memory snapshot.
+2026-10-06 16:13:01-07:00 ta-01M49QV7AAK1ECAAP4XCK2PC8R {"event": "worker_ready_hook", "boot_id": "fbab0fdb-0f51-4021-b42e-e9d8f77934ed", "capture_id": "235d84da-faed-4971-935c-676b802ceee8", "mode": "cpu"}
+2026-10-06 16:13:21-07:00 ta-01M49QWC85RB1N6XNW489BPW0R Restoring Function from memory snapshot.
+2026-10-06 16:13:24-07:00 ta-01M49QWC85RB1N6XNW489BPW0R {"event": "worker_ready_hook", "boot_id": "e0a455b9-8b6d-4caa-8dc9-f26b6bc55f40", "capture_id": "8544832e-f8ca-4763-aa1c-7ffa0248c08d", "mode": "gpu"}
+2026-10-06 16:13:41-07:00 ta-01M49QX0VVV9E7X9SV0N89XHRR Restoring Function from memory snapshot.
+2026-10-06 16:13:42-07:00 ta-01M49QX0VVV9E7X9SV0N89XHRR {"event": "worker_ready_hook", "boot_id": "58bdf19e-3c34-4ecf-9d2d-5069075097f5", "capture_id": "235d84da-faed-4971-935c-676b802ceee8", "mode": "cpu"}
+2026-10-06 16:14:16-07:00 ta-01M49QY2ZB9HJT1KR2MJC9QW6R Creating GPU memory snapshot for Function.
+2026-10-06 16:14:25-07:00 ta-01M49QY2ZB9HJT1KR2MJC9QW6R Sliding Window Attention is enabled but not implemented for `eager`; unexpected results may be encountered.
+2026-10-06 16:14:35-07:00 ta-01M49QY2ZB9HJT1KR2MJC9QW6R Snapshot created. Restoring Function from memory snapshot.
+2026-10-06 16:14:35-07:00 ta-01M49QY2ZB9HJT1KR2MJC9QW6R Restoring Function from memory snapshot.
+2026-10-06 16:14:36-07:00 ta-01M49QY2ZB9HJT1KR2MJC9QW6R {"event": "worker_ready_hook", "boot_id": "125d06d3-a693-46b7-bc69-78c4504b16e0", "capture_id": "39022680-0d02-4566-8cb0-25819929fc24", "mode": "gpu"}

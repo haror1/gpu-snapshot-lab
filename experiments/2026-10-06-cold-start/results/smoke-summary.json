@@ -1,0 +1,26 @@
+{
+  "none": {
+    "attempts": 2,
+    "errors": 1,
+    "eligible": 1,
+    "excluded": 1,
+    "median_client_ttft_ms": 10859.979166,
+    "p95_client_ttft_ms": null
+  },
+  "cpu": {
+    "attempts": 3,
+    "errors": 0,
+    "eligible": 1,
+    "excluded": 2,
+    "median_client_ttft_ms": 4653.515084,
+    "p95_client_ttft_ms": null
+  },
+  "gpu": {
+    "attempts": 3,
+    "errors": 0,
+    "eligible": 1,
+    "excluded": 2,
+    "median_client_ttft_ms": 6087.886708,
+    "p95_client_ttft_ms": null
+  }
+}
