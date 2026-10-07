@@ -1,6 +1,6 @@
 # Eager versus compiled startup
 
-**Status: 30 eligible eager samples per configuration collected; compiled validation in progress.**
+**Status: 30 eligible eager samples per configuration collected; compiled smoke validation passed with one eligible sample per configuration. Repeated compiled measurements remain pending.**
 
 Hypothesis: preserving compiled runtime state changes the balance between GPU snapshot restore cost and avoided initialization. Reproduce eager startup first, then compare a compiled variant. The initial smoke entry remains unchanged.
 

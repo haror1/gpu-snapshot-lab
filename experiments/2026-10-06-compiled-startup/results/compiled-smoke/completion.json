@@ -1,0 +1,18 @@
+{
+  "eligible": {
+    "compiled-none": 1,
+    "compiled-cpu": 1,
+    "compiled-gpu": 1
+  },
+  "attempts": {
+    "compiled-none": 1,
+    "compiled-cpu": 2,
+    "compiled-gpu": 2
+  },
+  "errors": {
+    "compiled-none": 0,
+    "compiled-cpu": 0,
+    "compiled-gpu": 0
+  },
+  "target_met": true
+}

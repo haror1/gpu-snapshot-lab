@@ -1,6 +1,6 @@
 # 2026-10-06 — What does compilation change about snapshot value?
 
-**Status: repeated eager measurements complete; compiled validation in progress.**
+**Status: repeated eager measurements and compiled smoke validation complete; repeated compiled cohort remains the next experiment.**
 
 ## Hypothesis
 
@@ -36,7 +36,23 @@ All ordinary and CPU-restore samples use A10/driver 580.95.05. GPU restore has 2
 
 ![Eager cold and warm latency distributions](../experiments/2026-10-06-compiled-startup/results/eager-plots/latency-ecdf.png)
 
-[Raw requests, platform logs, verification mappings, manifests, and source archives](../experiments/2026-10-06-compiled-startup/results/eager/); [machine-readable summary](../experiments/2026-10-06-compiled-startup/results/eager-summary.json). The source archive matches the manifest at collection start; the reviewed evidence uses the current classifier's additional lineage check. Compiled results are pending.
+[Raw requests, platform logs, verification mappings, manifests, and source archives](../experiments/2026-10-06-compiled-startup/results/eager/); [machine-readable summary](../experiments/2026-10-06-compiled-startup/results/eager-summary.json). The source archive matches the manifest at collection start; the reviewed evidence uses the current classifier's additional lineage check.
+
+### Compiled smoke validation
+
+Five attempts produce one eligible sample per configuration, excluding one CPU and one GPU snapshot creation. All five return token ID 576; there are no errors or warm-worker reuses. This validates compatibility for the tested prompt; it does not establish distributions or full-model numerical equivalence.
+
+| Compiled path | Eligible samples | Caller TTFT (ms) | Warm worker computation (ms) | GPU / driver |
+| --- | ---: | ---: | ---: | --- |
+| Ordinary | 1 | 93,090.93 | 12.39 | A10G / 610.57.04 |
+| CPU restore | 1 | 44,391.49 | 8.94 | A10 / 580.95.05 |
+| GPU restore | 1 | 5,789.58 | 8.48 | A10 / 580.95.05 |
+
+The CPU restore spends 38,678.90 ms in its first forward after restore. The GPU snapshot creation spends 38,840.37 ms in that forward before capture; the subsequent GPU restore returns the expected token without repeating that initialization hook. Its first request still spends 139.70 ms inside the worker, versus 8.48 ms on the immediate warm probe, so preserving initialization does not eliminate all first-request work.
+
+Creation-inclusive caller times are 66,119.85 ms for CPU and 69,123.73 ms for GPU. The ordinary compiled first forward takes 76,441.28 ms on a different GPU/driver pair. Hardware placement and the single sample per mode prevent a fair speedup estimate.
+
+[Compiled raw data and source archive](../experiments/2026-10-06-compiled-startup/results/compiled-smoke/); [compiled summary](../experiments/2026-10-06-compiled-startup/results/compiled-smoke-summary.json). Platform log collection includes earlier eager events from the same application; eligibility is restricted to this cohort's request identities.
 
 ## Conclusion
 
@@ -44,6 +60,8 @@ Snapshot restores have lower median caller TTFT in this eager cohort. GPU restor
 
 Imports are the largest instrumented ordinary-startup stage, with a 2,780.37 ms median. Substantial time remains outside instrumentation. An ordinary startup took 38,195.15 ms while its instrumented initialization stages totaled 5,749.63 ms. The remaining time includes uninstrumented work and platform/RPC effects; it cannot be labeled as one startup stage. Caller TTFT must remain separate from worker stage timings.
 
+Compiled smoke validation supports the mechanism: CPU snapshots leave expensive first-forward work after restore, while the tested GPU snapshot retains the initialized compiled path. The 5,789.58 ms GPU restore is a successful compatibility result, not a benchmark distribution. Repeated compiled measurements are still needed.
+
 ## Next question
 
-Does restoring compiled state reduce caller TTFT while preserving output and warm inference performance?
+Does the compiled result hold over 30 verified starts per mode, with GPU/driver groups reported separately? In particular, how much first-request work remains after restoring compiled state, and how variable is the caller latency?

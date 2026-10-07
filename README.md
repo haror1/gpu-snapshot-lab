@@ -33,6 +33,8 @@ Each experiment follows **hypothesis → method → numbers → conclusion → n
 | CPU snapshot restore | 3,453.48 | 30 |
 | GPU snapshot restore | 3,262.36 | 30 |
 
-Qwen2.5-0.5B-Instruct, FP16, requested A10 class, image-cached weights. Snapshot creation and unverified restores are excluded; outliers remain, including a 60,059.13 ms GPU restore. Platform placement and host caches are uncontrolled. [Distributions, method, and exclusions](notes/2026-10-06-eager-vs-compiled.md). Compiled validation is in progress.
+Qwen2.5-0.5B-Instruct, FP16, requested A10 class, image-cached weights. Snapshot creation and unverified restores are excluded; outliers remain, including a 60,059.13 ms GPU restore. Platform placement and host caches are uncontrolled. [Distributions, method, and exclusions](notes/2026-10-06-eager-vs-compiled.md).
+
+Compiled smoke validation also passed: the verified GPU restore returned its first token in 5,789.58 ms, versus 44,391.49 ms for CPU restore. Each has only one eligible sample; repeated compiled measurements remain pending. [Validation results and limitations](notes/2026-10-06-eager-vs-compiled.md#compiled-smoke-validation).
 
 The [initial smoke entry](notes/2026-10-06-cold-start.md) preserves the earlier harness validation and its failures.

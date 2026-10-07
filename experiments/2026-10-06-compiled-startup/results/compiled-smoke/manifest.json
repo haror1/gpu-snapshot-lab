@@ -1,0 +1,23 @@
+{
+  "variants": [
+    "compiled-none",
+    "compiled-cpu",
+    "compiled-gpu"
+  ],
+  "target": 1,
+  "max_attempts": 5,
+  "max_errors": 1,
+  "max_wall_seconds": 1800,
+  "cooldown_timeout": 120,
+  "seed": 42,
+  "output_dir": "experiments/2026-10-06-compiled-startup/results/compiled-smoke",
+  "source_sha256": {
+    "run.py": "a2a30778b0c36f0921f6dd57e8c70758114a030979674e07486c997af8252aca",
+    "plot.py": "c366d87d80309f68b66431cc8032e6fdc5c05f2695ab15271cfa7e9108e5ef05",
+    "protocol.py": "848fc702ba2c9867fdfbe5b7a819e8d25921b1ecdc3055602a1f352e7745e25e",
+    "app.py": "98a09fb3e61f0051fb50c8c4415368d79c700fb255c68989edc5b2278e607cb4",
+    "analyze.py": "f34f6965f0ef76c04271dc453cd63e191fd96a7ee2ac8c49ede31281d57b6645"
+  },
+  "client_modal": "1.5.5",
+  "started_utc": "2026-10-07T01:47:11.465913+00:00"
+}
