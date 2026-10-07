@@ -34,7 +34,3 @@ Each experiment follows **hypothesis → method → numbers → conclusion → n
 | GPU snapshot restore | 6,087.89 | 1 |
 
 These smoke runs validate the harness. One metadata failure, three snapshot-creation runs, and one warm-worker reuse were excluded. Repeated measurements are needed to establish distributions and compare configurations. [Method, raw data, and exclusions](notes/2026-10-06-cold-start.md).
-
-## Related writing
-
-Companion writing at [himanshu-arora.com](https://himanshu-arora.com): DFlash vs DFlash 2, DSpark, Inside SGLang: DFlash Implementation, and RDMA for LLM Inference: When the Network Enters the Token Loop.
