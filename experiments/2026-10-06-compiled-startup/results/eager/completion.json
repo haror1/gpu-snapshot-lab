@@ -1,0 +1,18 @@
+{
+  "eligible": {
+    "eager-none": 30,
+    "eager-cpu": 30,
+    "eager-gpu": 30
+  },
+  "attempts": {
+    "eager-none": 30,
+    "eager-cpu": 33,
+    "eager-gpu": 32
+  },
+  "errors": {
+    "eager-none": 0,
+    "eager-cpu": 0,
+    "eager-gpu": 0
+  },
+  "target_met": true
+}

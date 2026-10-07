@@ -1,0 +1,536 @@
+{
+  "eager-none": {
+    "attempts": 30,
+    "errors": 0,
+    "eligible": 30,
+    "creation_runs": 0,
+    "warm_reuse": 0,
+    "output_mismatches": 0,
+    "client_ttft_ms": {
+      "n": 30,
+      "median": 9180.703417,
+      "p25": 8938.39325,
+      "p75": 9599.970292,
+      "min": 8699.172958,
+      "max": 43472.403916,
+      "p95": null
+    },
+    "server_ttft_ms": {
+      "n": 30,
+      "median": 23.16057,
+      "p25": 22.356243,
+      "p75": 23.933045,
+      "min": 21.530274,
+      "max": 25.773191,
+      "p95": null
+    },
+    "outside_instrumented_stages_ms": {
+      "n": 30,
+      "median": 3441.5764480000003,
+      "p25": 3321.0227809999988,
+      "p75": 3635.9796909999986,
+      "min": 2625.1460529999986,
+      "max": 38008.385079,
+      "p95": null
+    },
+    "warm_client_ttft_ms": {
+      "n": 30,
+      "median": 208.16956299999998,
+      "p25": 204.721833,
+      "p75": 216.13175,
+      "min": 162.58725,
+      "max": 306.054083,
+      "p95": null
+    },
+    "warm_server_ttft_ms": {
+      "n": 30,
+      "median": 20.042499,
+      "p25": 19.556623,
+      "p75": 20.544851,
+      "min": 18.574065,
+      "max": 21.165638,
+      "p95": null
+    },
+    "initialization_stages_ms": {
+      "cpu_weight_load_ms": {
+        "n": 30,
+        "median": 1949.2385645,
+        "p25": 1852.069737,
+        "p75": 2008.020283,
+        "min": 1793.778022,
+        "max": 2579.490327,
+        "p95": null
+      },
+      "cuda_init_ms": {
+        "n": 30,
+        "median": 196.9733035,
+        "p25": 187.693168,
+        "p75": 215.798904,
+        "min": 165.146376,
+        "max": 252.016933,
+        "p95": null
+      },
+      "first_forward_ms": {
+        "n": 30,
+        "median": 252.314731,
+        "p25": 243.269032,
+        "p75": 257.64846,
+        "min": 231.146918,
+        "max": 365.595809,
+        "p95": null
+      },
+      "gpu_weight_transfer_ms": {
+        "n": 30,
+        "median": 120.9775475,
+        "p25": 109.865384,
+        "p75": 131.810288,
+        "min": 105.266313,
+        "max": 144.099473,
+        "p95": null
+      },
+      "imports_ms": {
+        "n": 30,
+        "median": 2780.369103,
+        "p25": 2718.127554,
+        "p75": 2899.153585,
+        "min": 2640.726927,
+        "max": 3565.683431,
+        "p95": null
+      },
+      "second_forward_ms": {
+        "n": 30,
+        "median": 18.7251435,
+        "p25": 18.533111,
+        "p75": 19.303559,
+        "min": 17.752631,
+        "max": 19.733654,
+        "p95": null
+      },
+      "tokenizer_load_ms": {
+        "n": 30,
+        "median": 365.990946,
+        "p25": 326.679286,
+        "p75": 388.264653,
+        "min": 308.000653,
+        "max": 444.004942,
+        "p95": null
+      }
+    },
+    "initialization_provenance": "current_worker",
+    "post_restore_stages_ms": {},
+    "errors_detail": [],
+    "by_gpu_driver": {
+      "NVIDIA A10 | driver 580.95.05": {
+        "client_ttft_ms": {
+          "n": 30,
+          "median": 9180.703417,
+          "p25": 8938.39325,
+          "p75": 9599.970292,
+          "min": 8699.172958,
+          "max": 43472.403916,
+          "p95": null
+        },
+        "warm_server_ttft_ms": {
+          "n": 30,
+          "median": 20.042499,
+          "p25": 19.556623,
+          "p75": 20.544851,
+          "min": 18.574065,
+          "max": 21.165638,
+          "p95": null
+        }
+      }
+    }
+  },
+  "eager-cpu": {
+    "attempts": 33,
+    "errors": 0,
+    "eligible": 30,
+    "creation_runs": 2,
+    "warm_reuse": 0,
+    "output_mismatches": 0,
+    "client_ttft_ms": {
+      "n": 30,
+      "median": 3453.484146,
+      "p25": 3185.969916,
+      "p75": 3685.266625,
+      "min": 3042.652416,
+      "max": 17128.904375,
+      "p95": null
+    },
+    "server_ttft_ms": {
+      "n": 30,
+      "median": 23.1925045,
+      "p25": 22.747475,
+      "p75": 23.901505,
+      "min": 22.2658,
+      "max": 28.715276,
+      "p95": null
+    },
+    "outside_instrumented_stages_ms": {
+      "n": 30,
+      "median": 2781.1893489999998,
+      "p25": 2559.506602,
+      "p75": 3005.2777779999997,
+      "min": 2374.251467,
+      "max": 16486.57882,
+      "p95": null
+    },
+    "warm_client_ttft_ms": {
+      "n": 30,
+      "median": 209.909354,
+      "p25": 179.075458,
+      "p75": 217.052584,
+      "min": 167.13375,
+      "max": 334.241125,
+      "p95": null
+    },
+    "warm_server_ttft_ms": {
+      "n": 30,
+      "median": 20.1944515,
+      "p25": 19.935133,
+      "p75": 20.892896,
+      "min": 19.24738,
+      "max": 22.067387,
+      "p95": null
+    },
+    "initialization_stages_ms": {
+      "cpu_weight_load_ms": {
+        "n": 2,
+        "median": 2835.2119190000003,
+        "p25": 2792.822125,
+        "p75": 2877.601713,
+        "min": 2792.822125,
+        "max": 2877.601713,
+        "p95": null
+      },
+      "imports_ms": {
+        "n": 2,
+        "median": 4067.956488,
+        "p25": 3887.494728,
+        "p75": 4248.418248,
+        "min": 3887.494728,
+        "max": 4248.418248,
+        "p95": null
+      },
+      "tokenizer_load_ms": {
+        "n": 2,
+        "median": 454.3409515,
+        "p25": 413.96566,
+        "p75": 494.716243,
+        "min": 413.96566,
+        "max": 494.716243,
+        "p95": null
+      }
+    },
+    "initialization_provenance": "snapshot_creation_runs",
+    "post_restore_stages_ms": {
+      "cuda_init_ms": {
+        "n": 30,
+        "median": 209.7816825,
+        "p25": 179.452069,
+        "p75": 223.333679,
+        "min": 161.956662,
+        "max": 417.914923,
+        "p95": null
+      },
+      "first_forward_ms": {
+        "n": 30,
+        "median": 271.966176,
+        "p25": 265.089796,
+        "p75": 276.794164,
+        "min": 259.211415,
+        "max": 459.588543,
+        "p95": null
+      },
+      "gpu_weight_transfer_ms": {
+        "n": 30,
+        "median": 146.29146500000002,
+        "p25": 143.387136,
+        "p75": 152.318867,
+        "min": 133.134483,
+        "max": 303.696181,
+        "p95": null
+      },
+      "second_forward_ms": {
+        "n": 30,
+        "median": 18.9577065,
+        "p25": 18.731225,
+        "p75": 19.694339,
+        "min": 18.294239,
+        "max": 20.670684,
+        "p95": null
+      }
+    },
+    "errors_detail": [],
+    "by_gpu_driver": {
+      "NVIDIA A10 | driver 580.95.05": {
+        "client_ttft_ms": {
+          "n": 30,
+          "median": 3453.484146,
+          "p25": 3185.969916,
+          "p75": 3685.266625,
+          "min": 3042.652416,
+          "max": 17128.904375,
+          "p95": null
+        },
+        "warm_server_ttft_ms": {
+          "n": 30,
+          "median": 20.1944515,
+          "p25": 19.935133,
+          "p75": 20.892896,
+          "min": 19.24738,
+          "max": 22.067387,
+          "p95": null
+        }
+      }
+    }
+  },
+  "eager-gpu": {
+    "attempts": 32,
+    "errors": 0,
+    "eligible": 30,
+    "creation_runs": 2,
+    "warm_reuse": 0,
+    "output_mismatches": 0,
+    "client_ttft_ms": {
+      "n": 30,
+      "median": 3262.356396,
+      "p25": 3064.036041,
+      "p75": 3614.809709,
+      "min": 2652.5855,
+      "max": 60059.125542,
+      "p95": null
+    },
+    "server_ttft_ms": {
+      "n": 30,
+      "median": 33.875786,
+      "p25": 32.907056,
+      "p75": 35.404686,
+      "min": 31.288844,
+      "max": 110.480972,
+      "p95": null
+    },
+    "outside_instrumented_stages_ms": {
+      "n": 30,
+      "median": 3227.3587110000003,
+      "p25": 3031.951471,
+      "p75": 3581.547893,
+      "min": 2619.819277,
+      "max": 60024.298999,
+      "p95": null
+    },
+    "warm_client_ttft_ms": {
+      "n": 30,
+      "median": 209.4475,
+      "p25": 204.099791,
+      "p75": 219.959833,
+      "min": 164.318334,
+      "max": 285.013083,
+      "p95": null
+    },
+    "warm_server_ttft_ms": {
+      "n": 30,
+      "median": 20.135052,
+      "p25": 19.799353,
+      "p75": 20.971101,
+      "min": 18.604221,
+      "max": 27.831111,
+      "p95": null
+    },
+    "initialization_stages_ms": {
+      "cpu_weight_load_ms": {
+        "n": 2,
+        "median": 2690.279508,
+        "p25": 2634.598037,
+        "p75": 2745.960979,
+        "min": 2634.598037,
+        "max": 2745.960979,
+        "p95": null
+      },
+      "cuda_init_ms": {
+        "n": 2,
+        "median": 240.28310600000003,
+        "p25": 201.179965,
+        "p75": 279.386247,
+        "min": 201.179965,
+        "max": 279.386247,
+        "p95": null
+      },
+      "first_forward_ms": {
+        "n": 2,
+        "median": 331.9890565,
+        "p25": 286.834158,
+        "p75": 377.143955,
+        "min": 286.834158,
+        "max": 377.143955,
+        "p95": null
+      },
+      "gpu_weight_transfer_ms": {
+        "n": 2,
+        "median": 114.405035,
+        "p25": 111.183407,
+        "p75": 117.626663,
+        "min": 111.183407,
+        "max": 117.626663,
+        "p95": null
+      },
+      "imports_ms": {
+        "n": 2,
+        "median": 3966.358362,
+        "p25": 3767.248817,
+        "p75": 4165.467907,
+        "min": 3767.248817,
+        "max": 4165.467907,
+        "p95": null
+      },
+      "second_forward_ms": {
+        "n": 2,
+        "median": 22.6859545,
+        "p25": 18.978423,
+        "p75": 26.393486,
+        "min": 18.978423,
+        "max": 26.393486,
+        "p95": null
+      },
+      "tokenizer_load_ms": {
+        "n": 2,
+        "median": 432.18690949999996,
+        "p25": 331.279929,
+        "p75": 533.09389,
+        "min": 331.279929,
+        "max": 533.09389,
+        "p95": null
+      }
+    },
+    "initialization_provenance": "snapshot_creation_runs",
+    "post_restore_stages_ms": {},
+    "errors_detail": [],
+    "by_gpu_driver": {
+      "NVIDIA A10 | driver 580.95.05": {
+        "client_ttft_ms": {
+          "n": 29,
+          "median": 3254.037917,
+          "p25": 3064.036041,
+          "p75": 3456.602291,
+          "min": 2652.5855,
+          "max": 60059.125542,
+          "p95": null
+        },
+        "warm_server_ttft_ms": {
+          "n": 29,
+          "median": 20.129061,
+          "p25": 19.799353,
+          "p75": 20.743353,
+          "min": 18.604221,
+          "max": 21.737932,
+          "p95": null
+        }
+      },
+      "NVIDIA A10G | driver 610.57.04": {
+        "client_ttft_ms": {
+          "n": 1,
+          "median": 3966.641208,
+          "p25": 3966.641208,
+          "p75": 3966.641208,
+          "min": 3966.641208,
+          "max": 3966.641208,
+          "p95": null
+        },
+        "warm_server_ttft_ms": {
+          "n": 1,
+          "median": 27.831111,
+          "p25": 27.831111,
+          "p75": 27.831111,
+          "min": 27.831111,
+          "max": 27.831111,
+          "p95": null
+        }
+      }
+    }
+  },
+  "compiled-none": {
+    "attempts": 0,
+    "errors": 0,
+    "eligible": 0,
+    "creation_runs": 0,
+    "warm_reuse": 0,
+    "output_mismatches": 0,
+    "client_ttft_ms": {
+      "n": 0
+    },
+    "server_ttft_ms": {
+      "n": 0
+    },
+    "outside_instrumented_stages_ms": {
+      "n": 0
+    },
+    "warm_client_ttft_ms": {
+      "n": 0
+    },
+    "warm_server_ttft_ms": {
+      "n": 0
+    },
+    "initialization_stages_ms": {},
+    "initialization_provenance": "current_worker",
+    "post_restore_stages_ms": {},
+    "errors_detail": [],
+    "by_gpu_driver": {}
+  },
+  "compiled-cpu": {
+    "attempts": 0,
+    "errors": 0,
+    "eligible": 0,
+    "creation_runs": 0,
+    "warm_reuse": 0,
+    "output_mismatches": 0,
+    "client_ttft_ms": {
+      "n": 0
+    },
+    "server_ttft_ms": {
+      "n": 0
+    },
+    "outside_instrumented_stages_ms": {
+      "n": 0
+    },
+    "warm_client_ttft_ms": {
+      "n": 0
+    },
+    "warm_server_ttft_ms": {
+      "n": 0
+    },
+    "initialization_stages_ms": {},
+    "initialization_provenance": "snapshot_creation_runs",
+    "post_restore_stages_ms": {},
+    "errors_detail": [],
+    "by_gpu_driver": {}
+  },
+  "compiled-gpu": {
+    "attempts": 0,
+    "errors": 0,
+    "eligible": 0,
+    "creation_runs": 0,
+    "warm_reuse": 0,
+    "output_mismatches": 0,
+    "client_ttft_ms": {
+      "n": 0
+    },
+    "server_ttft_ms": {
+      "n": 0
+    },
+    "outside_instrumented_stages_ms": {
+      "n": 0
+    },
+    "warm_client_ttft_ms": {
+      "n": 0
+    },
+    "warm_server_ttft_ms": {
+      "n": 0
+    },
+    "initialization_stages_ms": {},
+    "initialization_provenance": "snapshot_creation_runs",
+    "post_restore_stages_ms": {},
+    "errors_detail": [],
+    "by_gpu_driver": {}
+  }
+}

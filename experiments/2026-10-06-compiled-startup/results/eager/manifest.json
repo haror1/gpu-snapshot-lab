@@ -1,0 +1,22 @@
+{
+  "variants": [
+    "eager-none",
+    "eager-cpu",
+    "eager-gpu"
+  ],
+  "target": 30,
+  "max_attempts": 40,
+  "max_errors": 3,
+  "max_wall_seconds": 3600,
+  "cooldown_timeout": 120,
+  "seed": 42,
+  "output_dir": "experiments/2026-10-06-compiled-startup/results/eager",
+  "source_sha256": {
+    "run.py": "08f52a985f82dfaa901205d637729c1fb064dc66a1052d08c0e663b4efe42ca8",
+    "protocol.py": "2566a3915ffc35c945b964b32a5e74eb3acfe3fba6fccbaa21a4c9109d757601",
+    "app.py": "98a09fb3e61f0051fb50c8c4415368d79c700fb255c68989edc5b2278e607cb4",
+    "analyze.py": "e13fc6626d1ebde5af5ad190a1043794e97ef13dfcb4a6ac42e3caf329d0e649"
+  },
+  "client_modal": "1.5.5",
+  "started_utc": "2026-10-07T01:13:04.790095+00:00"
+}

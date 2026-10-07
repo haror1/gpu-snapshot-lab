@@ -61,7 +61,7 @@ def main():
         axis.set_ylim(0, 1.03)
         axis.grid(alpha=.2)
         axis.legend(fontsize=8, loc="lower right")
-    fig.suptitle("Eager versus compiled startup — Qwen2.5-0.5B, A10, FP16\n"
+    fig.suptitle("Inference startup — Qwen2.5-0.5B, requested A10 class, FP16\n"
                  "Creation runs, warm reuse, and output mismatches excluded", fontsize=12)
     fig.savefig(args.output_dir / "latency-ecdf.png", dpi=180)
     fig.savefig(args.output_dir / "latency-ecdf.svg")

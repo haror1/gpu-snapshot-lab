@@ -1,0 +1,8 @@
+{
+  "app_name": "gpu-snapshot-lab-compiled-startup",
+  "profile": "arorah1710",
+  "model_image_id": "im-qXaPMOIbCiaBhZJl9YsDYp",
+  "deployment_wall_seconds": 20.928,
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "url": "https://modal.com/apps/arorah1710/main/deployed/gpu-snapshot-lab-compiled-startup"
+}

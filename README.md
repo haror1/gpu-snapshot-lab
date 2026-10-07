@@ -11,7 +11,7 @@ Each experiment follows **hypothesis → method → numbers → conclusion → n
 
 ## Experiment ladder
 
-0. **Cold-start anatomy.** Measure request-to-first-token latency and instrument imports, CUDA initialization, CPU weight loading, GPU transfer, and warmup. Compare ordinary startup, CPU snapshots, and GPU snapshots on Modal. [Experiment protocol](experiments/2026-10-06-cold-start/README.md). **Status: smoke validation complete; repeated benchmark measurements pending.**
+0. **Cold-start anatomy.** Measure request-to-first-token latency and instrument imports, CUDA initialization, CPU weight loading, GPU transfer, and warmup. Compare ordinary startup, CPU snapshots, and GPU snapshots on Modal. [Experiment protocol](experiments/2026-10-06-cold-start/README.md). **Status: 30 eligible eager samples per configuration collected.**
 1. **Snapshot/restore survey.** Investigate direct CUDA checkpointing, CRIU, and process-based approaches where the environment permits them. Document the runtime and driver requirements of each approach, and distinguish missing privileges from technology limitations. **Status: planned.**
 2. **Attack the biggest slice.** Use Experiment 0 to select one optimization. Candidate follow-ups include compiled runtime restoration or serving-engine snapshot contents. Publish before/after results. **Status: planned.**
 
@@ -25,12 +25,14 @@ Each experiment follows **hypothesis → method → numbers → conclusion → n
 - Unobservable time stays unassigned; failed runs stay in the dataset.
 - A snapshot setting is not proof that a particular worker restored a snapshot.
 
-## First measurements
+## Repeated eager measurements
 
-| Startup path | Caller time to first token (ms) | Eligible samples |
+| Startup path | Median caller time to first token (ms) | Eligible samples |
 | --- | ---: | ---: |
-| Ordinary startup | 10,859.98 | 1 |
-| CPU snapshot restore | 4,653.52 | 1 |
-| GPU snapshot restore | 6,087.89 | 1 |
+| Ordinary startup | 9,180.70 | 30 |
+| CPU snapshot restore | 3,453.48 | 30 |
+| GPU snapshot restore | 3,262.36 | 30 |
 
-These smoke runs validate the harness. One metadata failure, three snapshot-creation runs, and one warm-worker reuse were excluded. Repeated measurements are needed to establish distributions and compare configurations. [Method, raw data, and exclusions](notes/2026-10-06-cold-start.md).
+Qwen2.5-0.5B-Instruct, FP16, requested A10 class, image-cached weights. Snapshot creation and unverified restores are excluded; outliers remain, including a 60,059.13 ms GPU restore. Platform placement and host caches are uncontrolled. [Distributions, method, and exclusions](notes/2026-10-06-eager-vs-compiled.md). Compiled validation is in progress.
+
+The [initial smoke entry](notes/2026-10-06-cold-start.md) preserves the earlier harness validation and its failures.
