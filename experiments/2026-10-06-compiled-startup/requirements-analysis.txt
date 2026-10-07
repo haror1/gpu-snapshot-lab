@@ -1,0 +1,3 @@
+# Optional plotting environment; collection itself only needs the root requirements.txt.
+matplotlib==3.11.2
+numpy==2.5.3
